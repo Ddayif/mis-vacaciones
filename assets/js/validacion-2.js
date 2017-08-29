@@ -6,8 +6,25 @@ $(document).ready(function(){
 
 		if(nombre.length == 0 && correoDos.length == 0 && passDos.length == 0){
 			alert('Debes ingresar los datos solicitados para poder crear tu cuenta')
+		}else if(nombre.length == 0 && correoDos.length > 0 && passDos.length == 0){
+			alert("Favor complete los campos");
+		}else if(nombre.length > 0 && correoDos.length == 0 && passDos.length == 0){
+			alert("Favor complete los campos");
+		}else if(nombre.length > 0 && correoDos.length > 0 && passDos.length == 0){
+			alert("Favor complete los campos");
+		}else if(nombre.length > 0 && correoDos.length == 0 && passDos.length > 0){
+			alert("Favor complete los campos");
+		}else if(nombre.length == 0 && correoDos.length == 0 && passDos.length > 0){
+			alert("Favor complete los campos");
+		}else if(nombre.length == 0 && correoDos.length > 0 && passDos.length > 0){
+			alert("Favor complete los campos");
 		}else{
-			$('#boton-2').attr('href', 'index-3.html')
+			localStorage.setItem("correo", correoDos);		
+			$('#boton-2').attr('href', 'index-3.html');		
 		}
 	})
+	var corr = localStorage.getItem('correo');
+	console.log(localStorage.getItem('correo'));
+	$('#mostrar-correo').html(corr); 
 })
+

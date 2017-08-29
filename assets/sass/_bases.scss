@@ -1,0 +1,14 @@
+*{
+ 	margin: 0;
+ 	padding: 0;
+}
+
+.contenedor-foto{
+	background-color: yellow;
+	height: 35vh;
+	.foto{
+		height: 25vh;
+		width: 25vh;
+		margin-top: 7%;
+	}
+}
